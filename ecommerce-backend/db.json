@@ -1,4 +1,15 @@
 {
+  "users": [
+    {
+      "email": "youssef@gmail.com",
+      "password": "$2a$10$07p2jfFvKN7daNmY7/XHReu1WS1osjAFb33tHLpBns6Ui2jH63OHS",
+      "firstName": "youssef",
+      "lastName": "waleed",
+      "id": 1
+    }
+  ],
+  "wishlist": [],
+  
   "category": [
     {
       "id": 1,
