@@ -9,6 +9,7 @@ const actPlaceOrder = createAsyncThunk(
     const { rejectWithValue, getState } = thunkAPI;
     const { cart, auth } = getState() as RootState;
 
+    // build items list from cart
     const orderItems = cart.productsFullInfo.map((el) => ({
       id: el.id,
       title: el.title,
@@ -18,11 +19,20 @@ const actPlaceOrder = createAsyncThunk(
     }));
 
     try {
-      const res = await axios.post("/orders", {
-        userId: auth.user?.id,
-        items: orderItems,
-        subtotal,
-      });
+      const res = await axios.post(
+        "http://localhost:5005/orders", // make sure backend runs on this port
+        {
+          userId: auth.user?.id,
+          total: subtotal, // must be "total" (matches your db.json)
+          items: orderItems,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${auth.accessToken}`, // pass JWT
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       return res.data;
     } catch (error) {

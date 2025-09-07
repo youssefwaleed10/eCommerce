@@ -45,7 +45,8 @@ const CartSubtotalPrice = ({
         setShowModal(false);
       })
       .catch((error) => {
-        setError(error);
+        console.log("Order error:", error);
+        setError(error?.message || JSON.stringify(error) || "Something went wrong");
       })
       .finally(() => setLoading(false));
   };

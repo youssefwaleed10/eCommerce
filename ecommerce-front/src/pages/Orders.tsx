@@ -22,18 +22,19 @@ const Orders = () => {
           <Modal.Title>Products Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedProduct.map((el) => (
-            <ProductInfo
-              key={el.id}
-              title={el.title}
-              img={el.img}
-              price={el.price}
-              quantity={el.quantity}
-              direction="column"
-              style={{ marginBottom: "10px" }}
-            />
-          ))}
-        </Modal.Body>
+  {selectedProduct.map((el, index) => (
+    <ProductInfo
+      key={`${el.id}-${index}`}
+      title={el.title}
+      img={el.img}
+      price={el.price}
+      quantity={el.quantity}
+      direction="column"
+      style={{ marginBottom: "10px" }}
+    />
+  ))}
+</Modal.Body>
+
       </Modal>
 
       <Heading title="My Order" />
@@ -60,7 +61,7 @@ const Orders = () => {
                     Product Details
                   </span>
                 </td>
-                <td>{el.subtotal.toFixed(2)}</td>
+                <td>{(el.subtotal ?? 0).toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
