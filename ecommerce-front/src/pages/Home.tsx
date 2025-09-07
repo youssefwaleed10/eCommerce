@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
 
-import img1 from "../assets/images/img1.jpeg";
-import img2 from "../assets/images/img2.jpeg";
+import img1 from "../assets/images/img1.jpg";
+import img2 from "../assets/images/img2.jpg";
 import img3 from "../assets/images/img3.jpg";
-import img4 from "../assets/images/img4.jpg";
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -90,13 +90,6 @@ const Home = () => {
           <img
             src={img3}
             alt="Slide 3"
-            style={{ width: "100%", height: "400px", objectFit: "cover" }}
-          />
-        </div>
-        <div>
-          <img
-            src={img4}
-            alt="Slide 4"
             style={{ width: "100%", height: "400px", objectFit: "cover" }}
           />
         </div>

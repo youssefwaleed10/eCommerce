@@ -61,7 +61,8 @@ const Orders = () => {
                     Product Details
                   </span>
                 </td>
-                <td>{(el.subtotal ?? 0).toFixed(2)}</td>
+                <td>{el.items.reduce((acc, item) => acc + item.price * (item.quantity ?? 1), 0).toFixed(2)}</td>
+
               </tr>
             ))}
           </tbody>
