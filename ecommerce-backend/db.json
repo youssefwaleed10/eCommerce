@@ -6,10 +6,16 @@
       "firstName": "youssef",
       "lastName": "waleed",
       "id": 1
+    },
+    {
+      "email": "youssef10@gmail.com",
+      "password": "$2a$10$tfsHIu91VSJfM.XW.hW7LOTJMZoeVhCugbhLb9cl0KQ8W/YH1mz.q",
+      "firstName": "youssef",
+      "lastName": "waleed",
+      "id": 2
     }
   ],
   "wishlist": [],
-  
   "category": [
     {
       "id": 1,
